@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pntstudio.buzz.filterapp.ImageActivity">
+
+    <com.pntstudio.buzz.filterapp.view.PictureSurfaceView
+        android:id="@+id/image_img"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+<!--    <LinearLayout-->
+<!--        android:id="@+id/top_ll"-->
+<!--        android:background="@color/white"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp">-->
+<!--        <ImageView-->
+<!--            android:id="@+id/close_img"-->
+<!--            android:layout_margin="@dimen/margin_medium"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_cancel"/>-->
+<!--    </LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/filterConfigPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@id/menuBtnPanel">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filterSelectorPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@id/menuBtnPanel">
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/menuBtnPanel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:weightSum="4"
+        android:layout_alignParentBottom="true">
+<!--        <ImageView-->
+<!--            android:layout_weight="1"-->
+<!--            android:id="@+id/img_save"-->
+<!--            android:layout_width="@dimen/image_icon_size"-->
+<!--            android:layout_height="@dimen/image_icon_size"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:src="@drawable/ic_save"-->
+<!--            android:background="#00000000"-->
+<!--            android:scaleType="fitCenter"/>-->
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/img_filter"
+            android:layout_width="@dimen/image_icon_size"
+            android:layout_height="@dimen/image_icon_size"
+            android:layout_above="@id/menuBtnPanel"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_color_mix"
+            android:scaleType="fitCenter" />
+
+
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/img_config"
+                android:layout_width="@dimen/image_icon_size"
+                android:layout_height="@dimen/image_icon_size"
+                android:background="#00000000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_settings" />
+
+        <ImageButton
+            android:layout_weight="1"
+            android:id="@+id/img_share"
+            android:layout_width="@dimen/image_icon_size"
+            android:layout_height="@dimen/image_icon_size"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_send_black_24dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:id="@+id/img_retake"
+            android:layout_width="@dimen/image_icon_size"
+            android:layout_height="@dimen/image_icon_size"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_replay_black_24dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
